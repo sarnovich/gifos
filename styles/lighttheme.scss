@@ -414,7 +414,8 @@ input[type="text"] {
     line-height: 18px;
 }
 .gifImage {
-    background-image: url("./gifos/assets/media/loading.gif");
+    
+    background-image: url("./assets/media/loading.gif");
     background-position: center;
     background-repeat: no-repeat;
     
@@ -440,7 +441,7 @@ input[type="text"] {
     margin-right: auto;
 }
 .gifContainerTendencias {
-    background-image: url("./gifos/assets/media/loading.gif");
+    background-image: url("./assets/media/loading.gif");
     background-position: center;
     background-repeat: no-repeat;
    display: flex;

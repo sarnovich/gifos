@@ -640,13 +640,13 @@ input[type="text"] {
 }
 
 .gifImage {
-  background-image: url("./gifos/assets/media/loading.gif");
+  background-image: url("./assets/media/loading.gif");
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .gifVideo {
-  background-image: url("./gifos/assets/media/loading.gif");
+  background-image: url("./assets/media/loading.gif");
   background-position: center;
   background-repeat: no-repeat;
   height: 280px;
