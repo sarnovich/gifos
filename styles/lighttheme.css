@@ -624,7 +624,7 @@ input[type="text"] {
 }
 
 .gifImage {
-  background-image: url("./assets/media/loading.gif");
+  background-image: url("/gifos/assets/media/loading.gif");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -657,7 +657,7 @@ input[type="text"] {
 }
 
 .gifContainerTendencias {
-  background-image: url("./assets/media/loading.gif");
+  background-image: url("/gifos/assets/media/loading.gif");
   background-position: center;
   background-repeat: no-repeat;
   display: -webkit-box;
