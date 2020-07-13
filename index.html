@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GifOS Sarnovich Ivan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/lighttheme.css" id="theme">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body>
+  <header>
+    <div class="titleBar">
+      <p class="titleBar-text">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+      </p>
+    </div>
+    <nav class="navindex">
+      <div class="left-nav-container">
+        <img class="image-logo" src="./assets/media/gifOF_logo.png" alt="GifOS Logo" id="logo">
+      </div>
+      <div class="right-nav-container">
+        <a href="#" onclick="linkCrearGifos()" class="button-href" id="button-href"><div class="create-guifos">crear guifos</div></a>
+        <div class="theme_selector_button" onclick="themeSelector()">
+          <button class="left_selector_button"  type="button">Elegir tema</button>
+          <button class="right_selector_button" type="button">
+            <i class="fa fa-caret-down" id="arrow"></i>
+          </button>
+        <div class="dropdown-theme" id="dropdownTheme" >
+          <button class="dropdownContent" onclick="themeSelected('styles/lighttheme.css')">Sailor Day</button>
+          <button class="dropdownContent" onclick="themeSelected('styles/darktheme.css')">Sailor Night</button>
+        </div>
+      </div>
+     <a href="#" class="button-href" onclick="linkMisGifos()" id="button-href-crear"> <div class="mis-guifos">Mis Guifos</div>
+     </a>
+      </div> 
+    </nav>
+  </header> 
+  
+<section class="search-section">
+ <div class="search-container-gral">
+   <div class="search-top-container">
+     <div class="search-title-bar">
+       <p>Buscar</p>
+      </div>
+     <div class="search-input-container">
+       <input class="search-input" id="search-input" type="text" name="search-input-text" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+       <div class="search-button" id="search-button">
+           <img src="./assets/media/lupa_inactive.svg" class="image-maglass" alt="Lupa" id="lupa">
+           <p class="buscar-word">Buscar</p>
+       </div>
+     </div>
+   </div>
+   <div class="displaynone" id="sub-search-container">
+     <input class="input-sugerido" id="sug1" type="text">
+     <input class="input-sugerido" id="sug2" type="text">
+     <input class="input-sugerido" id="sug3" type="text">
+   </div>
+   <div class="displaynone" id="sugeContainer">
+      <div class="suge" id="suge1"></div>
+      <div class="suge" id="suge2"></div> 
+      <div class="suge" id="suge3"></div> 
+   </div>
+ </div> 
+</section>
+<section id="searched-section" class="displaynone">
+  <div class="sub-temas">
+    <p id="searched-result">Resultados de la busqueda:</p>
+  </div>
+  <div class="searched-main-container" id="searched-main-container-id"></div>
+</section>
+<section class="sugeridos" id="sugerencias">
+  <div class="sub-temas">
+    <p>Hoy te sugerimos:</p>
+  </div>
+  <div class="sugeridos-main-container" id="sugeridos-main-container"></div>
+</section>
+<section class="tendencias" id="tendencias">
+  <div class="sub-temas">
+    <p>Tendencias:</p>
+  </div>
+  <div class="tendencias-main-container" id="tendencias-main-container"></div>
+</section>
+ <script type="text/javascript" src="./assets/scripts/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>GifOS Sarnovich Ivan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="./styles/lighttheme.css" id="theme">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <header id="header" class="displaynone">
+    <div class="titleBar">
+      <p class="titleBar-text">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803
+      </p>
+    </div>
+    <nav class="navindex" id="nav">
+      <div class="left-nav-container">
+        <img class="image-logo" src="./assets/media/gifOF_logo.png" alt="GifOS Logo" id="logoguifos">
+      </div>
+      <div class="right-nav-container" id="rightNacContainer">
+        <a href="#" onclick="linkCrearGifos()" class="button-href" id="button-href"><div class="create-guifos">crear guifos</div></a>
+        <div class="theme_selector_button" onclick="themeSelector()">
+          <button class="left_selector_button"  type="button">Elegir tema</button>
+          <button class="right_selector_button" type="button">
+            <i class="fa fa-caret-down" id="arrow"></i>
+          </button>
+        <div class="dropdown-theme" id="dropdownTheme" >
+          <button class="dropdownContent" onclick="themeSelected('styles/lighttheme.css')">Sailor Day</button>
+          <button class="dropdownContent" onclick="themeSelected('styles/darktheme.css')">Sailor Night</button>
+        </div>
+      </div>
+     <a href="#" class="button-href" onclick="linkMisGifos()" id="button-href-crear"> <div class="mis-guifos">Mis Guifos</div>
+     </a>
+      </div>
+        
+    </nav>
+  </header> 
+  <section class="displaynone" id="crearGuifosSectionID">
+      <div class="crearGifosContainer" id="crearGuifosContainer">
+            <div class="crearGuifosTitle">
+                <p>Crear Guifos</p>
+            </div>
+            <div class="crearGuifosSubContainer">
+                <img class="crearGui" src="./assets/media/window_img.png" alt="logo de window">
+                <p class="crearGifosSubTitle">Aquí podrás crear tus propios guifos</p>
+            </div>
+            <div class="crearGuifosList">
+                <ul>
+                     <li>Crear tu <span class="bold">guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son: </li>
+                     <li>1) Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</li>   
+                     <li>2) Capturar tu momento guifo</li>   
+                     <li>3) Revisar el momento</li>   
+                     <li>4) Listo para subir y compartir!</li>   
+                     <li>¿Quieres comenzar a crear tu <span class="bold">guifo</span> ahora?</li>  
+                </ul>
+            </div>
+            <div class="crearGuifosBotonera">
+                <a href="./index.html" target="_self"><div class="cancelButton">Cancelar</div></a>
+                <div class="start-capture" id="startButton">Comenzar</div>
+            </div>
+        </div>
+  </section>
+  <section id="capturing" class="displaynone">
+    <div class="capturing_container" id="capturingContainer">
+        <div class="capturing_bar_container">
+          <p>Un Chequeo Antes de Empezar</p>
+          <a href="./misguifos.html" target="_self"><img src="./assets/media/button3.svg" id="buttonClose" alt="close" class="buttonClose"></a>
+        </div>
+        <div class="camara" id="camara">
+          <video>
+          </video>
+          <img class="displaynone" id="preview" src="#" alt="GifImage">
+        </div>
+        <div class="button_capturar_container" id="buttonCapturarContainer">
+          <div class="counter hidden" id="counter"></div>
+          <div class="botoncontainer">
+            <div class="cam_image" id="camImage"><img src="./assets/media/camera.svg" alt="cam" class="camarita" id="cam"></div>
+            <div class="button_capturar_start" id="buttonCapturarStart">Capturar</div>
+            <div class="displaynone" id="repetirCaptura">Repetir Captura</div>
+            <div class="displaynone" id="subirGuifos">Subir Gifos</div>
+        </div>
+        </div>
+    </div>
+  </section>
+  <section id="subiendoGuifos" class="displaynone">
+    <div class="capturing_container" id="uploadContainer">
+        <div class="capturing_bar_container">
+          <p>Suebiendo Guifos</p>
+          <a href="./misguifos.html" target="_self"><img src="./assets/media/button3.svg" alt="close" class="buttonClose"></a>
+        </div>
+        <div class="subiendo_container" id="preview2">
+          <img class="icon_globe" src="./assets/media/globe_img.png" alt="globe_icon">
+          <p class="uploading_text">Estamos subiendo tu guifo…</p>
+          <div class="load_bar_container" id="loadBarContainer">
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+            <div class="load_bar_member"></div>
+          </div>
+          <p class="time_remaining">Tiempo restante: <span class="text-tach">38 años</span> algunos minutos</p>
+        </div>
+        <div class="cancelcontainer">
+            <div class="cancelButton" id="cancel_button">Cancelar</div>
+        </div>
+        </div>
+  </section>
+  <section class="displaynone" id="guifosSuccess"> <!--guifo_success-->
+    <div class="guifo_success_container" id="guifosSuccessContainer">
+      <div class="capturing_bar_container">
+        <p>Guifo Subido Con Exito</p>
+        <a href="./misguifos.html" target="_self"><img src="./assets/media/button3.svg" id="buttonClosed" alt="close" class="buttonClose"></a>
+      </div>
+      <div class="guifo_success_sub_container">
+        <img class="guifo_success_image" id="guifoSuccessImage" src="#" alt="Upload OK">
+        <div class="guifo_success_botonera">
+          <p>Guifo creado con éxito</p>
+          <div class="guifo_success_button" id="guifoSuccessCopy">Copiar Enlace Guifo</div>
+          <a href="#" id="guifoSuccessDownload" target="_blank" download="archivo.gif"><div class="guifo_success_button" >Descargar Guifo</div> </a>
+        </div>
+      </div>
+      <div class="guifo_success_button_listo" id="guifoSuccessListo">Listo</div>
+    </div>
+  </section>
+  <section class="displaynone" id="misGuifos">
+    <div class="sub-temas">
+      <p>Mis Guifos</p>
+    </div>
+    <div class="misGuifos-main-container" id="misGuifos-main-container"></div>
+  </section>
+<div id="upload-msg"></div>
+  <script type="text/javascript" src="./assets/scripts/upload.js"></script>
+  <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+</body>
+</html>
