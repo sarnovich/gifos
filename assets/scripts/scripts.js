@@ -103,7 +103,7 @@ callRandom().then (
       gifVideo.setAttribute('src', urlgif);
       gifImage.appendChild(gifVideo);
       let buttonVerMasLink = document.createElement('a')
-      buttonVerMasLink.setAttribute('href', 'https://giphy.com/'); //CARGAR MAS RESULTADOS EN BUSCADOR
+      buttonVerMasLink.setAttribute('href', 'https://giphy.com/'); 
       buttonVerMasLink.setAttribute('target', '_blank');
       buttonVerMasLink.setAttribute('class', 'buttonVerMasLink');
       
@@ -135,7 +135,7 @@ const CallTrending = async() => {
     const link = 'https://api.giphy.com/v1/gifs/trending?api_key=CGsGlZi1P2bkiZwKgxoL0ab1AThC7Tav&limit=24&rating=PG'
     const TradingFetch = await fetch(link);
     const TradingFetchJSON = await TradingFetch.json();
-    
+   
 return TradingFetchJSON;
   } 
   catch (error) {
@@ -156,16 +156,21 @@ CallTrending().then(
           container.setAttribute('class', 'gifContainerTendencias')
           let gifVideo = document.createElement('img');
           let bar = document.createElement('div');
-          
+          let titleGif = res.data[contador -1 ].title;
+          let tags = titleGif.split(" ",3);
           bar.setAttribute('class', 'gifBarTendencia');
           let par = document.createElement('p');
           par.setAttribute('class', 'tags');
-          par.innerHTML="#fixed tag"
+          par.innerHTML=`#${tags[0]} #${tags[1]} #${tags[2]}`;
           bar.appendChild(par);
     
           let gifImage = document.createElement('div');
           
           let urlgif = res.data[contador -1 ].images.original.url;
+         
+          
+         
+
           
           
             if ( resto == 0 ){

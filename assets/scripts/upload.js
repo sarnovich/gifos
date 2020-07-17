@@ -16,6 +16,7 @@ const loadbarmember = document.getElementsByClassName('load_bar_member');
 const guifosuccesspreview = document.getElementById('guifoSuccessImage');
 let recordingFlag = false;
 let recorder;
+let blob;
 const record = document.getElementById('buttonCapturarStart')
 const video = document.querySelector('video');
 const stop = document.getElementById('stop'); //boton de detener
@@ -25,6 +26,7 @@ const uploadMessage = document.getElementById('upload-msg');
 const download = document.getElementById('guifoSuccessDownload');
 const copy = document.getElementById('guifoSuccessCopy');
 const nav = document.getElementById('nav');
+
 function listenerIcono () {
     
   let clicklogo = document.getElementById("logoguifos");
@@ -156,6 +158,7 @@ let themeSelector = () => {
     recorder.camara.stop();
     let form = new FormData();
     form.append("file", recorder.getBlob(), 'un.gif');
+    blob = recorder.getBlob();
     subirGuifos.addEventListener('click', () => {
       preview.classList.add('hidden');
       capturingSection.setAttribute('class', 'displaynone');
@@ -213,15 +216,17 @@ let themeSelector = () => {
   //funciones de botones post gif
   
   function getGifDetails (id) {
-    fetch(api + id + api_key) //revisar esto
+    fetch(api + id + api_key) 
     .then((response) => {
       return response.json()
     }).then(data => {
+     
       const gifUrl = data.data.url
       let giffinal = data.data.images.downsized.url
       localStorage.setItem('gif' + data.data.id, JSON.stringify(data));
 
-    download.setAttribute('href', 'data:image/gif;' + giffinal);
+    download.href = String(objectURL);
+    download.download = "archivo.gif";
    
     
       copy.addEventListener('click', async () => {
